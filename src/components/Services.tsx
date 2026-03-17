@@ -1,3 +1,7 @@
+import massage1 from "../assets/figures/images/massage_1.jpg";
+import massage2 from "../assets/figures/images/massage_2.jpg";
+import massage3 from "../assets/figures/images/massage_3.jpg";
+
 type ServiceItem = {
   title: string;
   description: string;
@@ -5,18 +9,37 @@ type ServiceItem = {
 };
 
 type ServicesProps = {
-  eyebrow: string;
-  title: string;
-  description: string;
-  items: ServiceItem[];
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  items?: ServiceItem[];
   id?: string;
 };
 
 export default function Services({
-  eyebrow,
-  title,
-  description,
-  items,
+  eyebrow = "Services",
+  title = "What I Offer",
+  description = "Three approaches to meet your needs.",
+  items = [
+    {
+      title: "Relaxation massage",
+      description:
+        "Ease tension and calm the nervous system. Gentle, flowing work for restoration.",
+      imageSrc: massage1,
+    },
+    {
+      title: "Deep tissue work",
+      description:
+        "Targeted pressure on muscle and fascia. Effective for chronic tension and injury recovery.",
+      imageSrc: massage2,
+    },
+    {
+      title: "Therapeutic release",
+      description:
+        "Specialized technique for restricted movement and pain. Combines assessment with precise treatment.",
+      imageSrc: massage3,
+    },
+  ],
   id = "services",
 }: ServicesProps) {
   return (
@@ -33,7 +56,7 @@ export default function Services({
             {items.map((item) => (
               <article
                 key={item.title}
-                className="relative flex min-h-52 w-full basis-80 grow items-center overflow-hidden rounded-2xl px-5 py-6 text-center text-white max-w-80"
+                className="relative flex min-h-52 w-full basis-80 grow items-center overflow-hidden rounded-2xl px-5 py-6 text-center text-white max-w-sm"
               >
                 <img
                   src={item.imageSrc}
