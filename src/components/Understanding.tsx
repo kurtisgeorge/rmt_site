@@ -2,7 +2,7 @@ import oilPlate from "../assets/figures/images/aesthetic_oil_plate.jpg";
 
 export default function Understanding() {
   return (
-    <section id="about" className="relative isolate overflow-hidden bg-cream">
+    <section className="relative isolate overflow-hidden bg-cream">
       <img
         src={oilPlate}
         alt=""

@@ -64,7 +64,7 @@ export default function Services({
                   aria-hidden="true"
                   className="absolute inset-0 h-full w-full object-cover grayscale brightness-60"
                 />
-                <div className="absolute inset-0 bg-pink-dark/65" />
+                <div className="absolute inset-0 bg-pink-overlay/75" />
                 <div className="relative w-full">
                   <h3 className="text-2xl lg:text-3xl leading-tight">{item.title}</h3>
                   <p className="mt-3 text-base lg:text-lg leading-6 text-white/85">
