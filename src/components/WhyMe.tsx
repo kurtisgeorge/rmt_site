@@ -32,7 +32,7 @@ export default function WhyMe() {
               <h2 className="text-4xl leading-tight tracking-tight text-black lg:text-5xl">
                 What sets my practice apart
               </h2>
-              <p className="font-open-sans text-base text-black/70 lg:text-lg">
+              <p className="font-sans text-base text-black/70 lg:text-lg">
                 Registered Massage Therapy focused on consistent results, respectful care, and long-term wellness.
               </p>
             </div>
@@ -50,7 +50,7 @@ export default function WhyMe() {
                   <h3 className="text-2xl leading-tight lg:text-3xl">
                     {reason.title}
                   </h3>
-                  <p className="font-open-sans text-base leading-6 text-black/70 lg:text-lg">
+                  <p className="font-sans text-base leading-6 text-black/70 lg:text-lg">
                     {reason.desc}
                   </p>
                 </div>

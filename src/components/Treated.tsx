@@ -40,7 +40,7 @@ export default function Treated() {
             <h2 className="mt-4 text-4xl leading-tight tracking-tight text-black lg:text-5xl">
               What can be treated
             </h2>
-            <p className="mt-3 font-open-sans text-base text-black/70 lg:text-lg">
+            <p className="mt-3 font-sans text-base text-black/70 lg:text-lg">
               Massage therapy addresses a wide range of physical concerns.
             </p>
           </div>
@@ -58,10 +58,15 @@ export default function Treated() {
                 >
                   <Icon className="h-10 w-10 text-black mx-auto" aria-hidden={true} />
                   <h3
-                    className="mt-5 leading-tight text-black text-2xl lg:text-3xl">
+                    className={`mt-5 leading-tight text-black ${
+                      index === 0
+                        ? "text-2xl md:text-4xl lg:text-5xl"
+                        : "text-2xl lg:text-3xl"
+                    }`}
+                  >
                     {item.title}
                   </h3>
-                  <p className="mt-4 font-open-sans text-sm leading-6 text-black/70 lg:text-base">
+                  <p className="mt-4 font-sans text-sm leading-6 text-black/70 lg:text-base">
                     {item.description}
                   </p>
                 </article>
