@@ -12,14 +12,6 @@ export default function Hero() {
                 <p className="mx-auto max-w-md text-center text-sm leading-7 sm:mx-0 sm:text-left md:text-base lg:text-lg">
                     Registered massage therapy tailored to your body—relaxation, deep tissue, and therapeutic treatment for real results.
                 </p>
-                <div className="flex w-full justify-center sm:justify-start">
-                    <a
-              href="#booking"
-              className="rounded-full bg-pink-primary px-8 py-3 text-base text-white transition hover:bg-pink-dark md:hidden"
-            >
-              Book
-                    </a>
-                </div>
             </div>
             <div className="aspect-square w-full overflow-hidden sm:w-1/2 sm:flex-none">
                 <img 

@@ -10,7 +10,7 @@ export default function Pricing() {
     <section id="rates" className="bg-cream py-12">
       <div className="mx-auto max-w-4xl px-6 md:px-10 lg:px-12">
         <div className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.1em] md:text-sm">
+          <p className="text-xs uppercase tracking-[0.1em] md:text-sm">
             Rates
           </p>
           <h2 className="mt-3 font-serif text-4xl leading-tight text-black md:text-5xl">

@@ -34,10 +34,10 @@ export default function Treated() {
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
         <div className="rounded-2xl px-8 py-12 md:px-12 md:py-16">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] md:text-sm">
+            <p className="text-xs uppercase tracking-[0.28em] md:text-sm">
               Conditions
             </p>
-            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-tight text-black lg:text-5xl">
+            <h2 className="mt-4 text-4xl leading-tight tracking-tight text-black lg:text-5xl">
               What can be treated
             </h2>
             <p className="mt-3 font-open-sans text-base text-black/70 lg:text-lg">
@@ -58,7 +58,7 @@ export default function Treated() {
                 >
                   <Icon className="h-10 w-10 text-black mx-auto" aria-hidden={true} />
                   <h3
-                    className={`mt-5 font-semibold leading-tight text-black ${
+                    className={`mt-5 leading-tight text-black ${
                       index === 0
                         ? "text-2xl md:text-4xl lg:text-5xl"
                         : "text-2xl lg:text-3xl"

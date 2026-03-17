@@ -14,7 +14,7 @@ export default function About() {
           </div>
 
           <article className="order-1 px-5 py-8 text-white sm:px-7 md:order-2 md:rounded-sm md:bg-pink-dark md:px-8 md:py-10 lg:px-10 lg:py-12">
-            <p className="text-xs font-semibold uppercase tracking-[0.1em] text-white/85 md:hidden">
+            <p className="text-xs uppercase tracking-[0.1em] text-white/85 md:hidden">
               Background
             </p>
             <h2 className="mt-2 font-serif text-4xl leading-tight sm:text-5xl md:mt-0">

@@ -70,18 +70,20 @@ function AccordionItem({ item }: { item: FaqItem }) {
       <button
         type="button"
         onClick={() => setIsOpen((open) => !open)}
-        className="flex w-full items-center justify-between gap-4 text-left"
+        className="flex w-full justify-center px-4 sm:px-6 md:px-0"
         aria-expanded={isOpen}
       >
-        <h3 className="text-base font-semibold leading-tight text-black md:text-lg">
-          {item.question}
-        </h3>
-        <ChevronUp
-          className={`h-4 w-4 shrink-0 text-black transition-transform duration-200 ${
-            isOpen ? "rotate-0" : "rotate-180"
-          }`}
-          aria-hidden="true"
-        />
+        <div className="flex w-full max-w-md items-center justify-between gap-4 text-left">
+          <h3 className="flex-1 text-left text-base leading-tight text-black md:text-lg">
+            {item.question}
+          </h3>
+          <ChevronUp
+            className={`h-4 w-4 shrink-0 text-black transition-transform duration-200 ${
+              isOpen ? "rotate-0" : "rotate-180"
+            }`}
+            aria-hidden="true"
+          />
+        </div>
       </button>
 
       <div
@@ -90,7 +92,7 @@ function AccordionItem({ item }: { item: FaqItem }) {
         }`}
       >
         <div className="overflow-hidden">
-          <p className="max-w-[60ch] text-sm leading-7 text-black/70 md:text-base">
+          <p className="mx-auto max-w-md px-4 text-left text-sm leading-7 text-black/70 sm:px-6 md:px-0 md:text-base">
             {item.answer}
           </p>
         </div>

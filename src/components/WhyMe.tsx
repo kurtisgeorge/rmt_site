@@ -24,12 +24,12 @@ export default function WhyMe() {
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
         <div className="rounded-2xl px-8 py-12 text-center md:px-12 md:py-16">
           <div className="mx-auto max-w-2xl space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] md:text-sm">
+            <p className="text-xs uppercase tracking-[0.28em] md:text-sm">
               Why choose me
             </p>
 
             <div className="space-y-3">
-              <h2 className="text-4xl font-semibold leading-tight tracking-tight text-black lg:text-5xl">
+              <h2 className="text-4xl leading-tight tracking-tight text-black lg:text-5xl">
                 What sets my practice apart
               </h2>
               <p className="font-open-sans text-base text-black/70 lg:text-lg">
@@ -47,7 +47,7 @@ export default function WhyMe() {
                   className="mx-auto flex max-w-sm flex-col items-center justify-start gap-4 text-center border border-gray-400/50 p-6 rounded-xl"
                 >
                   <Icon className="h-10 w-10 lg:h-11 lg:w-11" aria-hidden="true" />
-                  <h3 className="text-2xl font-semibold leading-tight lg:text-3xl">
+                  <h3 className="text-2xl leading-tight lg:text-3xl">
                     {reason.title}
                   </h3>
                   <p className="font-open-sans text-base leading-6 text-black/70 lg:text-lg">
