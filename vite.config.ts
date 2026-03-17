@@ -10,10 +10,6 @@ export default defineConfig(({ command }) => ({
   },
   plugins: [
     tailwindcss(),
-    react({
-      babel: {
-        plugins: ['babel-plugin-react-compiler'],
-      },
-    }),
+    react(),
   ],
 }))
