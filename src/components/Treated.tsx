@@ -58,12 +58,7 @@ export default function Treated() {
                 >
                   <Icon className="h-10 w-10 text-black mx-auto" aria-hidden={true} />
                   <h3
-                    className={`mt-5 leading-tight text-black ${
-                      index === 0
-                        ? "text-2xl md:text-4xl lg:text-5xl"
-                        : "text-2xl lg:text-3xl"
-                    }`}
-                  >
+                    className="mt-5 leading-tight text-black text-2xl lg:text-3xl">
                     {item.title}
                   </h3>
                   <p className="mt-4 font-open-sans text-sm leading-6 text-black/70 lg:text-base">
