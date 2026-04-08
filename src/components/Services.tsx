@@ -1,6 +1,7 @@
 import massage1 from "../assets/figures/images/massage_1.jpg";
 import massage2 from "../assets/figures/images/massage_2.jpg";
 import massage3 from "../assets/figures/images/massage_3.jpg";
+import FadeIn from "./FadeIn";
 
 type ServiceItem = {
   title: string;
@@ -46,17 +47,19 @@ export default function Services({
     <section id={id} className="bg-cream py-12">
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
         <div className="rounded-2xl px-8 py-12 md:px-12 md:py-16">
-          <div className="mx-auto max-w-2xl text-center">
+          <FadeIn className="mx-auto max-w-2xl text-center">
             <p className="text-xs md:text-sm uppercase tracking-[0.28em]">{eyebrow}</p>
             <h2 className="mt-4 text-4xl lg:text-5xl leading-tight">{title}</h2>
             <p className="mt-3 text-base lg:text-lg text-black/70">{description}</p>
-          </div>
+          </FadeIn>
 
           <div className="mx-auto mt-10 flex flex-wrap justify-center gap-4 md:mt-12 md:gap-6">
-            {items.map((item) => (
-              <article
+            {items.map((item, index) => (
+              <FadeIn
                 key={item.title}
-                className="relative flex min-h-52 w-full basis-80 grow items-center overflow-hidden rounded-2xl px-5 py-6 text-center text-white max-w-sm"
+                delay={index * 80}
+                className="relative flex min-h-52 w-full basis-80 grow items-center overflow-hidden rounded-2xl px-5 py-6 text-center text-white max-w-sm card-hover"
+                as="article"
               >
                 <img
                   src={item.imageSrc}
@@ -71,7 +74,7 @@ export default function Services({
                     {item.description}
                   </p>
                 </div>
-              </article>
+              </FadeIn>
             ))}
           </div>
         </div>

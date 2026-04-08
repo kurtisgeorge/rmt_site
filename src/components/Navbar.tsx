@@ -29,7 +29,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50  bg-cream-soft">
+      <header className="sticky top-0 z-50 bg-cream-soft nav-animate">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-10 lg:px-12">
           <a href="#top" className="shrink-0">
             <img
@@ -53,8 +53,10 @@ export default function Navbar() {
 
           <div className="hidden md:block">
             <a
-              href="#booking"
-              className="inline-flex items-center justify-center rounded-full bg-pink-primary px-8 py-3 text-base text-white transition hover:bg-pink-dark"
+              href="https://proactivephysio.janeapp.com/locations/clarenville/book#/staff_member/437"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-lift inline-flex items-center justify-center rounded-full bg-pink-primary px-8 py-3 text-base text-white transition hover:bg-pink-dark"
             >
               Book
             </a>
@@ -117,9 +119,11 @@ export default function Navbar() {
               ))}
             </div>
             <a
-              href="#booking"
+              href="https://proactivephysio.janeapp.com/locations/clarenville/book#/staff_member/437"
+              target="_blank"
+              rel="noreferrer"
               onClick={closeMenu}
-              className="mx-auto mb-10 inline-flex items-center justify-center rounded-full bg-pink-primary px-10 py-4 text-sm text-white transition hover:bg-pink-dark"
+              className="btn-lift mx-auto mb-10 inline-flex items-center justify-center rounded-full bg-pink-primary px-10 py-4 text-sm text-white transition hover:bg-pink-dark"
             >
               Book
             </a>

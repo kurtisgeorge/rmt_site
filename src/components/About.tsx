@@ -1,19 +1,28 @@
 import alexisLake from "../assets/figures/images/alexis_lake.jpeg";
+import FadeIn from "./FadeIn";
 
 export default function About() {
   return (
     <section id="about" className="bg-pink-dark py-12 md:bg-cream">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-10 lg:px-12">
         <div className="grid items-stretch gap-6 md:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] md:gap-10">
-          <div className="order-2 overflow-hidden rounded-2xl md:order-1 md:self-center">
+          <FadeIn
+            direction="left"
+            className="order-2 overflow-hidden rounded-2xl md:order-1"
+          >
             <img
               src={alexisLake}
               alt="Alexis standing in front of a mountain lake"
               className="h-full w-full object-cover"
             />
-          </div>
+          </FadeIn>
 
-          <article className="order-1 px-5 py-8 text-white sm:px-7 md:order-2 md:rounded-sm md:bg-pink-dark md:px-8 md:py-10 lg:px-10 lg:py-12">
+          <FadeIn
+            direction="right"
+            delay={80}
+            as="article"
+            className="order-1 overflow-hidden px-5 py-8 text-white text-center md:text-left sm:px-7 md:order-2 rounded-2xl md:bg-pink-dark md:px-8 md:py-10 lg:px-10 lg:py-12"
+          >
             <p className="text-xs uppercase tracking-[0.1em] text-white/85 md:hidden">
               Background
             </p>
@@ -49,16 +58,16 @@ export default function About() {
                 </h3>
                 <p className="mt-3 text-sm leading-7 text-white/90">
                   While I enjoyed my time in St. John&apos;s, my heart was pulling
-                  me back to my hometown. I returned to Clarenville and accepted
-                  a position at Therapeutic Touch Massage Clinic in December
-                  2016, where I&apos;ve since built a wonderful clientele. When
-                  I&apos;m not at the clinic, you can usually find me chasing my
-                  boys, going on family hikes, enjoying campfires with friends,
-                  or spending time out on the water.
+                  me back to my hometown. I returned to Clarenville and have since
+                  built a wonderful clientele. I now practice from the Proactive
+                  location on Thompson Street, where I continue doing the work I
+                  love. When I&apos;m not at the clinic, you can usually find me
+                  chasing my boys, going on family hikes, enjoying campfires with
+                  friends, or spending time out on the water.
                 </p>
               </div>
             </div>
-          </article>
+          </FadeIn>
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import type { ComponentType } from "react";
 import { Bone, Slice, Apple } from "lucide-react";
+import FadeIn from "./FadeIn";
 
 type TreatedItem = {
   icon: ComponentType<{ className?: string; "aria-hidden"?: boolean }>;
@@ -33,7 +34,7 @@ export default function Treated() {
     <section className="bg-cream py-12">
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
         <div className="rounded-2xl px-8 py-12 md:px-12 md:py-16">
-          <div className="mx-auto max-w-2xl text-center">
+          <FadeIn className="mx-auto max-w-2xl text-center">
             <p className="text-xs uppercase tracking-[0.28em] md:text-sm">
               Conditions
             </p>
@@ -43,16 +44,18 @@ export default function Treated() {
             <p className="mt-3 font-sans text-base text-black/70 lg:text-lg">
               Massage therapy addresses a wide range of physical concerns.
             </p>
-          </div>
+          </FadeIn>
 
           <div className="mx-auto mt-10 grid max-w-6xl grid-cols-1 gap-4 md:mt-12 md:grid-cols-4 md:gap-6">
             {treatedItems.map((item, index) => {
               const Icon = item.icon;
 
               return (
-                <article
+                <FadeIn
                   key={item.title}
-                  className={`rounded-2xl border border-stone-300/70 p-6 text-center ${
+                  delay={index * 90}
+                  as="article"
+                  className={`rounded-2xl border border-stone-300/70 p-6 text-center card-hover ${
                     index === 0 ? "md:col-span-2 flex flex-col justify-center" : "md:col-span-1"
                   }`}
                 >
@@ -69,7 +72,7 @@ export default function Treated() {
                   <p className="mt-4 font-sans text-sm leading-6 text-black/70 lg:text-base">
                     {item.description}
                   </p>
-                </article>
+                </FadeIn>
               );
             })}
           </div>

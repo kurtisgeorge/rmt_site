@@ -1,4 +1,5 @@
 import oilPlate from "../assets/figures/images/aesthetic_oil_plate.jpg";
+import FadeIn from "./FadeIn";
 
 export default function Understanding() {
   return (
@@ -12,7 +13,7 @@ export default function Understanding() {
       <div className="absolute inset-0 bg-black/40" />
 
       <div className="relative mx-auto flex min-h-80 max-w-7xl items-center justify-center px-6 py-16 text-center text-white md:min-h-96 md:px-10 lg:px-12 lg:py-20 xl:py-24">
-        <div className="max-w-xl">
+        <FadeIn className="max-w-xl">
           <p className="text-xs uppercase tracking-[0.08em] md:text-sm">
             Understanding
           </p>
@@ -24,7 +25,7 @@ export default function Understanding() {
             fascia, and connective tissue to reduce pain, improve function, and
             support healing.
           </p>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import { CircleDot, Flower, FileBadge } from 'lucide-react';
+import FadeIn from "./FadeIn";
 
 export default function WhyMe() {
   const reasons = [
@@ -23,7 +24,7 @@ export default function WhyMe() {
     <section className="bg-cream-soft py-12">
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
         <div className="rounded-2xl px-8 py-12 text-center md:px-12 md:py-16">
-          <div className="mx-auto max-w-2xl space-y-3">
+          <FadeIn className="mx-auto max-w-2xl space-y-3">
             <p className="text-xs uppercase tracking-[0.28em] md:text-sm">
               Why choose me
             </p>
@@ -36,24 +37,25 @@ export default function WhyMe() {
                 Registered Massage Therapy focused on consistent results, respectful care, and long-term wellness.
               </p>
             </div>
-          </div>
+          </FadeIn>
 
           <div className="mx-auto mt-10 grid max-w-6xl grid-cols-1 gap-8 md:mt-12 md:grid-cols-3 md:gap-6">
-            {reasons.map((reason) => {
+            {reasons.map((reason, index) => {
               const Icon = reason.icon;
               return (
-                <div
+                <FadeIn
                   key={reason.title}
-                  className="mx-auto flex max-w-sm flex-col items-center justify-start gap-4 text-center border border-gray-400/50 p-6 rounded-xl"
+                  delay={index * 90}
+                  className="mx-auto flex max-w-sm flex-col items-center justify-start gap-4 text-center border border-gray-400/50 p-6 rounded-xl card-hover"
                 >
-                  <Icon className="h-10 w-10 lg:h-11 lg:w-11" aria-hidden="true" />
+                  <Icon className="h-10 w-10 lg:h-11 lg:w-11" aria-hidden={true} />
                   <h3 className="text-2xl leading-tight lg:text-3xl">
                     {reason.title}
                   </h3>
                   <p className="font-sans text-base leading-6 text-black/70 lg:text-lg">
                     {reason.desc}
                   </p>
-                </div>
+                </FadeIn>
               );
             })}
           </div>

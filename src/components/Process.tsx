@@ -1,3 +1,5 @@
+import FadeIn from "./FadeIn";
+
 const processSteps = [
   {
     number: "1",
@@ -29,7 +31,7 @@ export default function Process() {
   return (
     <section id="process" className="bg-cream py-14 md:py-20">
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
-        <div className="mx-auto max-w-5xl text-center">
+        <FadeIn className="mx-auto max-w-5xl text-center">
           <p className="text-xs uppercase tracking-[0.08em] text-black/70 md:text-sm">
             Process
           </p>
@@ -40,9 +42,10 @@ export default function Process() {
             Each session follows a clear, professional structure designed for
             your comfort and results.
           </p>
-        </div>
+        </FadeIn>
 
         <div className="mt-12 md:mt-16">
+          {/* Desktop */}
           <div className="relative hidden md:block">
             <div
               className="absolute left-[8%] right-[8%] top-4 border-t border-[#e7d8cc]"
@@ -50,8 +53,13 @@ export default function Process() {
             />
 
             <div className="grid grid-cols-4 gap-8">
-              {processSteps.map((step) => (
-                <article key={step.number} className="text-center">
+              {processSteps.map((step, index) => (
+                <FadeIn
+                  key={step.number}
+                  delay={index * 90}
+                  as="article"
+                  className="text-center"
+                >
                   <div className="relative mx-auto flex h-8 w-8 items-center justify-center rounded-full bg-[#ddb4ab] text-sm text-white">
                     {step.number}
                   </div>
@@ -61,15 +69,18 @@ export default function Process() {
                   <p className="mx-auto mt-3 max-w-52 text-center text-sm leading-7 text-black/70">
                     {step.description}
                   </p>
-                </article>
+                </FadeIn>
               ))}
             </div>
           </div>
 
+          {/* Mobile */}
           <div className="space-y-8 md:hidden">
             {processSteps.map((step, index) => (
-              <article
+              <FadeIn
                 key={step.number}
+                delay={index * 70}
+                as="article"
                 className="relative mx-auto max-w-48 text-center"
               >
                 {index < processSteps.length - 1 ? (
@@ -87,7 +98,7 @@ export default function Process() {
                 <p className="mx-auto mt-3 max-w-48 text-center text-sm leading-7 text-black/70">
                   {step.description}
                 </p>
-              </article>
+              </FadeIn>
             ))}
           </div>
         </div>

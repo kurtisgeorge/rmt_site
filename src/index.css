@@ -55,6 +55,89 @@
   --font-display: "DM Serif Display", serif;
 }
 
+/* ─── Keyframes ────────────────────────────────────────────────── */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ─── Utility classes ──────────────────────────────────────────── */
+
+/* Hero content — staged entrance */
+.hero-animate-1 {
+  animation: fadeUp 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.hero-animate-2 {
+  animation: fadeUp 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s both;
+}
+.hero-animate-image {
+  animation: fadeIn 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s both;
+}
+
+/* Navbar entrance */
+.nav-animate {
+  animation: slideDown 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* Button lift — add to links/buttons for a premium hover feel */
+.btn-lift {
+  @apply transition-all duration-200;
+}
+.btn-lift:hover {
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.10);
+  transform: translateY(-1px);
+}
+.btn-lift:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Card hover elevation */
+.card-hover {
+  @apply transition-all duration-200;
+}
+.card-hover:hover {
+  box-shadow: 0 6px 24px 0 rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+/* ─── Accessibility: Respect reduced motion ─────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ─── Base ──────────────────────────────────────────────────────── */
+
 @layer base {
   body {
     @apply font-sans;

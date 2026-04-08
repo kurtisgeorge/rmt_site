@@ -1,5 +1,6 @@
 import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
 import diffuser from "../assets/figures/images/diffuser.jpg";
+import FadeIn from "./FadeIn";
 
 const contactItems = [
   {
@@ -7,25 +8,24 @@ const contactItems = [
     label: "Email",
     description: "Send a message anytime",
     detail: null,
-    value: "alathamrmt@gmail.com",
-    href: "mailto:alathamrmt@gmail.com",
+    value: "clarenville@proactivewp.ca",
+    href: "mailto:clarenville@proactivewp.ca",
   },
   {
     icon: Phone,
     label: "Phone",
-    description: "Text or call for appointments",
+    description: "Give us a call",
     detail: null,
-    value: "(709) 427-0948",
-    href: "tel:17094270948",
+    value: "1-709-466-3783",
+    href: "tel:17094663783",
   },
   {
     icon: MapPin,
     label: "Office",
     description: null,
-    detail:
-      "Therapeutic Touch Massage Clinic, 263 Memorial Drive, Suite 201, Clarenville, NL, A5A 1R5. Entrance at back of building.",
+    detail: "57–59 Thompson Street, Clarenville, NL, A5A 0G6",
     value: "Get directions",
-    href: "https://maps.google.com/?q=263+Memorial+Drive+Suite+201+Clarenville+NL+A5A+1R5",
+    href: "https://maps.google.com/?q=57+Thompson+Street+Clarenville+NL+A5A+0G6",
   },
 ];
 
@@ -37,7 +37,10 @@ export default function Contact() {
     <section id="contact" className="bg-green-deep py-12 md:py-16">
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
         <div className="grid items-start gap-10 md:grid-cols-3 md:gap-12">
-          <div className="text-center text-white md:col-span-1 md:text-left">
+          <FadeIn
+            direction="left"
+            className="text-center text-white md:col-span-1 md:text-left"
+          >
             <p className="text-sm text-white/85 md:hidden">Get in touch</p>
             <h2 className="mt-2 font-serif text-4xl leading-tight text-white md:mt-0 md:text-5xl">
               <span className="md:hidden">Book your session</span>
@@ -108,15 +111,19 @@ export default function Contact() {
                 })()
               ) : null}
             </div>
-          </div>
+          </FadeIn>
 
-          <div className="mx-auto w-full max-w-2xl overflow-hidden rounded-xl md:col-span-2 md:mt-6 md:rounded-2xl">
+          <FadeIn
+            direction="right"
+            delay={100}
+            className="mx-auto w-full max-w-2xl overflow-hidden rounded-xl md:col-span-2 md:mt-6 md:rounded-2xl"
+          >
             <img
               src={diffuser}
               alt="Aromatherapy diffuser"
-              className="aspect-16/10 h-full w-full object-cover object-[0%_75%] "
+              className="aspect-16/10 h-full w-full object-cover object-[0%_75%]"
             />
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>
