@@ -6,7 +6,6 @@ const contactItems = [
   {
     icon: Mail,
     label: "Email",
-    description: "Send a message anytime",
     detail: null,
     value: "clarenville@proactivewp.ca",
     href: "mailto:clarenville@proactivewp.ca",
@@ -14,7 +13,6 @@ const contactItems = [
   {
     icon: Phone,
     label: "Phone",
-    description: "Give us a call",
     detail: null,
     value: "1-709-466-3783",
     href: "tel:17094663783",
@@ -46,10 +44,6 @@ export default function Contact() {
               <span className="md:hidden">Book your session</span>
               <span className="hidden md:inline">More to ask? Get in touch.</span>
             </h2>
-            <p className="mx-auto mt-4 max-w-sm text-sm leading-7 text-white/80 md:mx-0 md:hidden">
-              Text or call to schedule, or fill out the form below and I'll get
-              back to you within 24 hours.
-            </p>
 
             <div className="mt-8 space-y-7 md:mt-12 md:space-y-8">
               <div className="grid grid-cols-2 gap-6">
